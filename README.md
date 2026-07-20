@@ -26,18 +26,6 @@ A tiny, reproducible **A/B testing simulator** for Uber-style promos: **Free Del
 
 ---
 
-## Install
-
-```bash
-# in a fresh virtualenv
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-# if you have pyproject/setup, otherwise add src to PYTHONPATH
-pip install -e . || export PYTHONPATH=$PYTHONPATH:$(pwd)/src
-```
-
----
-
 ## Quickstart (Python)
 
 ```python
