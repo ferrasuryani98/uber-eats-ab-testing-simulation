@@ -1,9 +1,5 @@
 # Uber Eats A/B Simulator — Free Delivery vs $5 Off (MOV + CUPED)
 
-[![python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](#)
-[![license: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![deps](https://img.shields.io/badge/deps-numpy%20%7C%20pandas-lightgrey.svg)](#)
-
 A tiny, reproducible **A/B testing simulator** for Uber-style promos: **Free Delivery** vs **$5 Off**. It estimates **Net Incremental Revenue per 1,000 exposures (NIR/1k)**, models **Minimum Order Value (MOV)** rules (friction + flooring), and applies **CUPED** for variance reduction. Built with NumPy/Pandas; no heavy deps.
 
 **Last updated:** 2025-08-20
@@ -121,18 +117,6 @@ net = take_rate * subtotal
 - **Free Delivery**: no fee revenue; courier cost still incurred.  
 - **$5 Off**: fee charged; discount applies only if subtotal ≥ threshold.  
 **NIR per exposure** = `net_variant − net_baseline`, then scale to **NIR/1k**.
-
----
-
-## Project layout
-
-```
-src/ubereats_ab/
-  __init__.py
-  version.py
-  sim.py                  # BizParams, simulate(), summarize_variant(), CUPED, tests
-tests/
-```
 
 ---
 
